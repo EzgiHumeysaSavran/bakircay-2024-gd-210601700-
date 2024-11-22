@@ -16,13 +16,4 @@ public class PlacementZone : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

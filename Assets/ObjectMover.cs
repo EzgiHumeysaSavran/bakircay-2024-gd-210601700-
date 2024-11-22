@@ -39,8 +39,4 @@ public class ObjectMover : MonoBehaviour
         mousePoint.z = cam.WorldToScreenPoint(transform.position).z;
         return cam.ScreenToWorldPoint(mousePoint);
     }
-    void Update()
-    {
-        
-    }
 }
