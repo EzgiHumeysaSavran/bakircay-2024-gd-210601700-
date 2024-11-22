@@ -7,10 +7,11 @@ public class ObjectMover : MonoBehaviour
     private Vector3 offset;
     private Camera cam;
     private Rigidbody rb;
-    
+    private PlacementZone currentPlacementZone;
+
     void Start()
     {
-        cam= Camera.main;
+        cam = Camera.main;
         rb = GetComponent<Rigidbody>();
         rb.useGravity = true;
         rb.isKinematic = false;
@@ -18,8 +19,15 @@ public class ObjectMover : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (currentPlacementZone != null)
+        {
+            currentPlacementZone.RemoveObject();
+            currentPlacementZone = null;
+        }
+
         rb.isKinematic = true;
         offset = transform.position - GetMouseWorldPosition();
+        transform.position += new Vector3(0, 0.25f, 0);
     }
 
     private void OnMouseDrag()
@@ -33,10 +41,16 @@ public class ObjectMover : MonoBehaviour
     {
         rb.isKinematic = false;
     }
+
     private Vector3 GetMouseWorldPosition()
     {
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = cam.WorldToScreenPoint(transform.position).z;
         return cam.ScreenToWorldPoint(mousePoint);
+    }
+
+    public void SetPlacementZone(PlacementZone zone)
+    {
+        currentPlacementZone = zone;
     }
 }
