@@ -18,5 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FruitScene.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 87c99f61f06d02549b2b557aab55071a,
+      type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 68916c078e979ed40a845b77d041aa48, type: 2}
