@@ -21,7 +21,7 @@ Freeze Skill:
 Freezes all objects for 3 seconds. Frozen objects are grows and shrinks for the time being.
 
 Wind Skill:
-Applies a random directional force to all objects, scattering them across the scene.
+Applies a random directional force to all objects, scattering them across the scene while playing a wind sound.
 
 Bounce Skill:
 Makes all draggable objects jump up and down for 3 seconds.
